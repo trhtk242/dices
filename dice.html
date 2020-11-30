@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Untitled Document</title>
+  
+    <script>
+        Math.randomIntger = (min , max) => {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+            }
+        
+        let random = [];
+        function OnRollDiceClick()
+        {
+
+            let rnd = Math.randomIntger(0,9)
+            id_span.innerHTML = rnd;
+            id_img.src = "dice/die" + rnd + ".jpg";
+            random.push(rnd);
+            id_span2.innerHTML = random;
+        }
+        //setInterval(OnRollDiceClick,100);
+    </script>
+</head>
+
+<body onLoad="init()">
+    <div class="all_site" id="id_all_site"></div>
+    <img id="id_img" src="dice/die2.jpg" width="150" />
+     <h2>you got:<span id="id_span"></span> </h2>
+     <h2>last getting:<span id="id_span2"></span> </h2>
+    <button onclick="OnRollDiceClick()">roll dice</button>
+
+</body>
+</html>

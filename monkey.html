@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>monkeyClick</title>
+    <style>
+        body{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <script>
+        Math.randomIntger = (min , max) => {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+        let charHe = ['א','ב','ג','ד','ה','ו','ז','ח','ט','י','כ','ל','מ','נ','ס','ע','פ','צ','ק','ר','ש','ת','ך','ם','נ','ף','ץ',' ',0,1,2,3,4,5,6,7,8,9,',','.'];
+        let text1 = ' ';
+        let text2 = ' ';
+        let text3 = ' ';     
+        let text4 = ' ';
+        function monkeyClick(){
+            text1 = text1 + charHe[Math.randomIntger(0,39)];
+            text2 = text2 + charHe[Math.randomIntger(0,39)];
+            text3 = text3 + charHe[Math.randomIntger(0,39)];
+            text4 = text4 + charHe[Math.randomIntger(0,39)];
+
+            id_pre1.innerHTML = text1;
+            id_pre2.innerHTML = text2;
+            id_pre3.innerHTML = text3;
+            id_pre4.innerHTML = text4;
+
+
+        }setInterval(monkeyClick,100);
+    </script>
+    <p id="id_pre1"></p><br/><br/>
+    <p id="id_pre2"></p><br/><br/>
+    <p id="id_pre3"></p><br/><br/>
+    <p id="id_pre4"></p><br/><br/>
+</body>
+</html>
